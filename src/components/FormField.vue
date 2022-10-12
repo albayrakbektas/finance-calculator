@@ -9,6 +9,7 @@
       @input="$emit('input', $event.target.value)"
       @focusin="data = true"
       @focusout="data = false"
+      step="any"
       required
     />
     <textarea
@@ -66,13 +67,13 @@ export default {
 <style lang="scss" scoped>
 .form-field {
   position: relative;
-  margin-bottom: 30px;
+  margin: 30px;
 }
 input,
 textarea {
   width: 100%;
   height: 50px;
-  padding: 0 15px 0 60px;
+  padding: 15px;
   background: linear-gradient(159deg, #252532 0%, #23232d 100%);
   outline: none;
   border: none;
@@ -87,14 +88,14 @@ textarea {
 }
 textarea {
   height: 150px;
-  padding: 15px 0 15px 65px;
+  padding: 15px;
 }
 label {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
-  width: 50px;
+  width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
