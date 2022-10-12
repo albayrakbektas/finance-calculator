@@ -100,7 +100,7 @@ export default {
       );
       this.$refs.formula.innerText = "Formula:\n" + formula;
       this.$refs.steps.innerText = "Steps:\n" + steps;
-      this.$refs.result.innerText = "Result:\n" + result;
+      this.$refs.result.innerText = "Result:\n" + result.toFixed(2);
       this.showResult = true;
     },
   },
@@ -133,5 +133,15 @@ select {
 }
 span {
   text-align: left;
+}
+button {
+  background-color: #20202a;
+  color: #8c8c8e;
+  height: 50px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  float: right;
+  margin-right: 30px;
 }
 </style>
