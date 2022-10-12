@@ -59,6 +59,14 @@ export default {
           text: "Compound Discount Present Value",
           value: "compoundDiscountPresentValue",
         },
+        {
+          text: "Constant Force Of Interest",
+          value: "constantForceOfInterest",
+        },
+        {
+          text: "Constant Force Of Interest Present Value",
+          value: "constantForceOfInterestPresentValue",
+        },
       ],
       showResult: false,
       formFieldList: [

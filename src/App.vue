@@ -99,6 +99,18 @@ export default {
       let result = principal * Math.pow(1 - discount / 100, time / 12);
       return { formula, steps, result };
     },
+    constantForceOfInterest(principal, interest, time) {
+      let formula = "A(t) = A(0) * e ^ st";
+      let steps = `A(t) = ${principal} * e ^ ${interest / 100}*${time / 12}`;
+      let result = principal * Math.E ** ((interest / 100) * (time / 12));
+      return { formula, steps, result };
+    },
+    constantForceOfInterestPresentValue(principal, interest, time) {
+      let formula = "A(0) = A(t) * e ^ (-st)";
+      let steps = `A(t) = ${principal} * e ^ -(${interest / 100}*${time / 12})`;
+      let result = principal * Math.E ** -((interest / 100) * (time / 12));
+      return { formula, steps, result };
+    },
     landingPage() {
       setTimeout(() => {
         this.$store.state.landingPageTimeout = false;
